@@ -1,0 +1,92 @@
+/* ###### GENERAL #####*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  --primary-purple: rgb(169, 77, 254);
+  --primary-gray: rgb(241, 242, 243);
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+hmtl, body {
+  width: 100%;
+  min-width: 37.5rem;
+  height: 100%;
+}
+
+header, main, footer, aside {
+  width: min(42.5rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+img, svg {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+/* ###### HEADER #####*/
+
+
+header div, header nav{
+  display: flex;
+  padding-block: 0.5rem;
+  align-items: center;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 13.4rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--primary-purple);
+}
+
+header div:nth-child(1) {
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .wrapper {
+  gap: 1rem;
+}
+
+header h1 {
+  position: absolute;
+  left: calc(50% - 7.48rem);
+  cursor: pointer;
+}
+
+nav {
+  justify-content: space-between;
+}
+
+nav::before {
+  content: "";
+  width: 100%;
+  height: 4.4rem;
+  display: block;
+  position: absolute;
+  top: 4.4rem;
+  left: 0;
+  z-index: -1;
+  background-color: var(--primary-gray);
+}
+
+header div:nth-child(3) {
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: space-around;
+}
