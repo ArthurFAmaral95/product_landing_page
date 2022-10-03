@@ -6,6 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Landing Page</title>
   <link rel="stylesheet" href="./style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script type="module" defer>
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+  const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 1,
+      setWrapperSize: true
+    }
+  }
+})
+</script> 
 </head>
 <body>
   <header>
@@ -37,10 +59,23 @@
   </header>
   <main>
     <section id="images">
-      <img src="./images/front.png" alt="Front view of Cruzeiro shirt">
-      <img src="./images/back.png" alt="Back view of Cruzeiro shirt">
-      <img src="./images/stars.png" alt="Detailed view of Cruzeiro`s five stars">
-      <img src="./images/adidas.png" alt="Detalied view of Adidas`s logo">
+      <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/front.png" alt="Front view of Cruzeiro shirt">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/back.png" alt="Back view of Cruzeiro shirt" id="back">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/stars.png" alt="Detailed view of Cruzeiro`s five stars">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/adidas.png" alt="Detalied view of Adidas`s logo">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+      </div>
     </section>
     <section id="details">
       <h2>Camisa Cruzeiro | 21/22 s/nº Torcedor Adidas Masculina - Azul</h2>
@@ -62,8 +97,10 @@
             <a href="https://www.flaticon.com/free-icons/star" target="_blank" title="star icons"><img src="./images/star.png" alt="Star icons created by Pixel perfect - Flaticon"></a>
           </li>
         </ul>
-        <p>702 avaliações</p>
-        <img src="./images/right_arrow.png" alt="right arrow">
+        <div>
+          <p>702 avaliações</p>
+          <img src="./images/right_arrow.png" alt="right arrow">
+        </div>
       </div>
       <p>Cor:<strong>Azul</strong></p>
       <div id="size">
