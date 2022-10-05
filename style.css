@@ -10,10 +10,13 @@
   font-size: 62.5%;
   --primary-purple: rgb(169, 77, 254);
   --primary-gray: rgb(241, 242, 243);
+  --primary-blue: rgb(2, 2, 217);
+  --primary-orange: rgb(255, 111, 0);
 }
 
 body {
   font-size: 1.6rem;
+  padding-bottom: 3rem;
 }
 
 hmtl, body {
@@ -31,10 +34,13 @@ header, main, footer, aside {
 img, svg {
   width: 2rem;
   height: 2rem;
+}
+
+img, svg, header h1, #size ul li, #moreInfo, button {
   cursor: pointer;
 }
-/* ###### HEADER #####*/
 
+/* ###### HEADER #####*/
 
 header div, header nav{
   display: flex;
@@ -65,7 +71,6 @@ header .wrapper {
 header h1 {
   position: absolute;
   left: calc(50% - 7.48rem);
-  cursor: pointer;
 }
 
 nav {
@@ -116,4 +121,119 @@ header div:nth-child(3) {
 
 #rating {
   gap: 1rem;
+}
+
+#size {
+  padding-block: 2rem;
+}
+
+#size p {
+  font-weight: bold;
+  color: var(--primary-blue);
+  padding-bottom: 1rem;
+}
+
+#size ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.4rem, 1fr));
+  gap: 1rem;
+  list-style-type: none;
+}
+
+#size ul li {
+  border: solid gray 1px;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding-block: 1.5rem;
+}
+
+#moreInfo {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ###### ASIDE #####*/
+
+aside {
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+aside p:nth-child(1) {
+  text-decoration: line-through red 2px;
+}
+
+aside p strong {
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+aside p span {
+  font-weight: bold;
+}
+
+ button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  text-transform: uppercase;
+  background-color: white;
+  color: var(--primary-blue);
+  border: var(--primary-blue) solid 1px;
+  border-radius: 0.5rem;
+}
+
+.orange {
+  background-color: var(--primary-orange);
+  color: white;
+  border: white;
+  padding-inline: 1rem;
+}
+
+/* ###### FOOTER #####*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  padding-block: 1rem;
+}
+
+footer div:nth-child(1) {
+  display: flex;
+  gap: 1rem;
+}
+
+footer div:nth-child(2) {
+  line-height: 2.5rem;
+}
+
+footer div:nth-child(2) p:nth-child(2) {
+  color: gray;
+}
+
+footer img {
+  width: 15%;
+  height: 100%
+}
+
+footer::before {
+  content: "";
+  width: 100%;
+  height: 7.372rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: white;
 }
