@@ -73,9 +73,18 @@ header h1 {
   left: calc(50% - 7.48rem);
 }
 
+
+#search {
+  display: none;
+}
+
 nav {
   justify-content: space-between;
   align-items: center;
+}
+
+nav ul {
+  display: none;
 }
 
 nav::before {
@@ -240,34 +249,67 @@ footer::before {
 
 /* ###### LARGER SCREENS #####*/
 
-@media (min-width: 700px) {
+@media (min-width: 889px) {
   header, main, footer, aside {
     width: 100%;
     margin-inline: auto;
     padding-inline: 2rem;
   }
 
-  body {
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "main aside";
-    grid-template-columns: 3fr 1fr;
+ #menu {
+  display: none;
+ }
+
+ header h1 {
+  left: 3rem;
+}
+
+  #search {
+    display: inline;
+    margin-inline: auto;
+    background-color: var(--primary-gray);
+    padding: 0.5rem 20rem 0.5rem 1rem;
+    border-radius: 30px;
   }
 
-  header {
-    grid-area: header;
+  header svg {
+    position: absolute;
+    left: calc(50% + 15rem);
   }
 
-  main { 
-    grid-area: main;
+  a[title="heart icons"] {
+    position: absolute;
+    right: 15%;
   }
 
-  aside {
-    grid-area: aside;
+  nav img:nth-child(2) {
+    display: none;
   }
 
-  footer { 
-    grid-area: aside;
+  nav {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  nav ul li {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  nav ul li:nth-child(1) {
+    font-weight: bold;
+    color: var(--primary-purple);
+  }
+
+  header div:nth-child(3) {
+    font-size: 2rem;
+    padding-top: 1rem;
   }
 }
