@@ -312,4 +312,12 @@ footer::before {
     font-size: 2rem;
     padding-top: 1rem;
   }
+
+  .swiper-slide {
+    padding-left: calc(50vw - 27rem);    
+  }
+
+  footer {
+    display: none;
+  }
 }
