@@ -25,7 +25,7 @@ hmtl, body {
   height: 100%;
 }
 
-header, main, footer, aside {
+header, main, footer {
   width: min(42.5rem, 100%);
   margin-inline: auto;
   padding-inline: 2rem;
@@ -164,25 +164,25 @@ header div:nth-child(3) {
   justify-content: space-between;
 }
 
-/* ###### ASIDE #####*/
+/* ###### PRICING #####*/
 
-aside {
+#pricing {
   padding-block: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-aside p:nth-child(1) {
+#pricing p:nth-child(1) {
   text-decoration: line-through red 2px;
 }
 
-aside p strong {
+#pricing p strong {
   font-size: 3rem;
   margin-right: 1rem;
 }
 
-aside p span {
+#pricing p span {
   font-weight: bold;
 }
 
@@ -274,13 +274,16 @@ footer::before {
 
   header svg {
     position: absolute;
-    left: calc(50% + 15rem);
+    left: calc(50% + 14rem);
   }
 
-  a[title="heart icons"] {
-    position: absolute;
-    right: 15%;
-  }
+/*
+a[title="heart icons"] {
+  position: absolute;
+  right: 15%;
+}
+
+*/
 
   nav img:nth-child(2) {
     display: none;
@@ -315,6 +318,13 @@ footer::before {
 
   .swiper-slide {
     padding-left: calc(50vw - 27rem);    
+  }
+
+  main .wrapper {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
 
   footer {
